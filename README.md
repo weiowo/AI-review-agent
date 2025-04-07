@@ -28,8 +28,19 @@ Make sure you have Python 3.9+ and [Ollama](https://ollama.com) installed and ru
 
    ```python main.py```
 
-4. **Install dependencies:**
+4. **Ask your question:**
 
    ```Ask your question (q to quit): 
    (for example: How is the ambiance of the restaurant?)
    ```
+
+---
+
+## Project Structure
+
+.
+├── main.py                          # Main chat loop
+├── vector.py                        # Vector store setup and retriever logic
+├── realistic_restaurant_reviews.csv  # Review data source
+├── requirements.txt                 # Required packages
+└── README.md                        # Project instructions
