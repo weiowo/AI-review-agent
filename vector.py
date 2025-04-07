@@ -4,7 +4,7 @@ from langchain_core.documents import Document
 import os
 import pandas as pd
 
-df = pd.read_csv("realistic_restaurant_reviews.csv")
+df = pd.read_csv("reviews.csv")
 embeddings = OllamaEmbeddings(model = "mxbai-embed-large")
 
 db_location = "./chrome_lanchain_db"
@@ -24,7 +24,7 @@ if add_documents:
         documents.append(document)
 
 vector_store = Chroma(
-    collection_name="restautant_reviews",
+    collection_name="reviews",
     persist_directory=db_location,
     embedding_function=embeddings
 )
